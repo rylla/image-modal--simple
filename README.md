@@ -4,5 +4,5 @@ A fairly portable JavaScript image modal, just link the .css and .js files to yo
 ## to-do
 - [ ] Create easier way to add / remove classes
 - [ ] Cleanup CSS
-- [ ] Change method image is displayed (element bg -> img element)
+- [x] Change method image is displayed (element bg -> img element)
 - [ ] Make better documentation 

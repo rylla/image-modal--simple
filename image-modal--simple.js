@@ -9,7 +9,6 @@ window.addEventListener("mouseover", function() {
 
   // Check if currently hovering over desired object
   if (object_tag == "img" && modal_status != 1) {
-    console.log(modal_status);
     target_object.classList.add("outline");
     target_object.style.cursor = "zoom-in";
 

@@ -1,14 +1,14 @@
 .modal__package {
-  cursor: zoom-out;
   z-index: 999;
+  cursor: zoom-out;
 }
 
 .modal__wrapper {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   border-radius: 5px;
 }
 
@@ -33,24 +33,24 @@
   background: rgba(0, 0, 0, 0.95);
 }
 
-.modal--100 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .modal--95 {
   width: 100%;
   height: 100%;
   transform: scale(0.95, 0.95);
 }
 
+.modal--100 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .outline {
-  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.85);
   transition: ease-in-out all 0.15s;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.85);
 }
 

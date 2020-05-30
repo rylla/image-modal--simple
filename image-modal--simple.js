@@ -1,14 +1,15 @@
-// Listen to all elements that mouse hovers over (maybe there is more efficient way)
 var modal_status = 0;
+
+// Listen to all elements that mouse hovers over (maybe there is more efficient way)
 window.addEventListener("mouseover", function() {
   event.stopPropagation();
 
   // Get items cursor is currently hovering over
   var target_object = event.target;
-  var object_tag = String(target_object.tagName).toLowerCase();
+  var target_object_tag = String(target_object.tagName).toLowerCase();
 
-  // Check if currently hovering over desired object
-  if (object_tag == "img" && modal_status != 1) {
+  // Check if currently hovering over desired object, and modal is not open
+  if (target_object_tag == "img" && !modal_status) {
     target_object.classList.add("outline");
     target_object.style.cursor = "zoom-in";
 
@@ -28,7 +29,6 @@ window.addEventListener("mouseover", function() {
 });
 
 function toggleModal(src) {
-
   if (src) {
     modal_status = 1;
 
@@ -42,6 +42,7 @@ function toggleModal(src) {
     var modal_package = document.createElement("DIV");
 
     modal_image.src = src;
+    
     modal_wrapper.classList.add("modal--95", "modal__wrapper");
     modal_image_wrapper.classList.add("modal--100", "modal__image__wrapper");
     helper.classList.add("helper");

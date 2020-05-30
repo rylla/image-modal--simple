@@ -5,8 +5,7 @@ window.addEventListener("mouseover", function() {
 
   // Get items cursor is currently hovering over
   var target_object = event.target;
-  var object_tag = target_object.tagName;
-  object_tag = object_tag.toLowerCase();
+  var object_tag = String(target_object.tagName).toLowerCase();
 
   // Check if currently hovering over desired object
   if (object_tag == "img" && modal_status != 1) {
@@ -61,7 +60,9 @@ function toggleModal(src) {
     modal_image_wrapper.appendChild(modal_image);
 
     window.addEventListener("click", function() {
+      event.stopImmediatePropagation();
       document.getElementsByClassName("modal__package")[0].remove();
+      window.removeEventListener("click", testFunction);
       modal_status = 0;
     });
   }

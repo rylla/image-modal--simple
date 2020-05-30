@@ -59,10 +59,10 @@ function toggleModal(src) {
     modal_image_wrapper.appendChild(helper);
     modal_image_wrapper.appendChild(modal_image);
 
-    window.addEventListener("click", function() {
+    window.addEventListener("click", function closeModal() {
       event.stopImmediatePropagation();
       document.getElementsByClassName("modal__package")[0].remove();
-      window.removeEventListener("click", testFunction);
+      window.removeEventListener("click", closeModal);
       modal_status = 0;
     });
   }
